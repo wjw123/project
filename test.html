@@ -1,0 +1,41 @@
+<STYLE type=text/css> 
+.menu { BORDER-RIGHT: #006080 2px solid; BORDER-TOP: #80e0ff 2px solid; LEFT: 0px; VISIBILITY: hidden; BORDER-LEFT: #80e0ff 2px solid; BORDER-BOTTOM: #006080 2px solid; POSITION: absolute; TOP: 0px; BACKGROUND-COLOR: #40a0c0 } 
+A.menuItem { BORDER-RIGHT: #000000 0px solid; PADDING-RIGHT: 12px; BORDER-TOP: #000000 0px solid; DISPLAY: block; PADDING-LEFT: 8px; FONT-WEIGHT: bold; FONT-SIZE: 8pt; PADDING-BOTTOM: 2px; BORDER-LEFT: #000000 0px solid; CURSOR: default; COLOR: #ffffff; PADDING-TOP: 2px; BORDER-BOTTOM: #000000 0px solid; FONT-FAMILY: MS Sans Serif, Arial, Tahoma, sans-serif; TEXT-DECORATION: none } 
+A.menuItem:hover { COLOR: #ffff00; BACKGROUND-COLOR: #004060 } 
+</STYLE> 
+<DIV class="menu" id="myMenu" style="positive:absolute;top:100px;left:100px;display:none;"><A class=menuItem 
+href="http://www.jb51.net">脚本之家</A> <A class=menuItem 
+href="http://www.baidu.com">百度</A> <A class=menuItem 
+href="">网 易</A> <A class=menuItem 
+href="">江苏音符</A> <A class=menuItem 
+href="">央视国际</A> </DIV> 
+<P><font onclick="openMenu(event, 'myMenu');return false;">点击打开菜单</font></P> 
+<SCRIPT type=text/javascript> 
+document.getElementById("myMenu").onmouseout = closeMenu; 
+function openMenu(event, id) { 
+   var el=document.getElementById(id);
+   el.style.display="block";
+}
+function closeMenu(event) { 
+var current, related; 
+if (window.event) { 
+current = this; 
+related = window.event.toElement; 
+} 
+else { 
+current = event.currentTarget; 
+related = event.relatedTarget; 
+} 
+if (current != related && !contains(current, related)) 
+current.style.visibility = "hidden"; 
+} 
+function contains(a, b) { 
+// Return true if node a contains node b. 
+while (b.parentNode) 
+if ((b = b.parentNode) == a) 
+return true; 
+return false; 
+} 
+</SCRIPT> </td>
+   </tr>
+ </table>
