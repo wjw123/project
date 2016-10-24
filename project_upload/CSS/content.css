@@ -1,0 +1,578 @@
+html,body,p,h1,h2,h3,h4,h5,ul,li,ol,dl,dd,img,a,div,span,form{
+	margin: 0px;
+	padding:0px;
+}
+*{
+    /*font-family:"微软雅黑",Arial;*/
+    word-wrap: break-word;
+}
+body{
+	margin:0px;
+	padding:0px;
+	color:#444;
+	font: 12px/1.6em Verdana,Helvetica,Arial,sans-serif;
+	background-color:#163965;
+}
+table{
+	empty-cells: show;
+    border-collapse: collapse;
+    border-color:grey;
+}
+tr{
+    display:table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+    overflow: hidden;
+}
+em{
+	font-style:normal;
+}
+tbody{
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+input,textarea:focus{
+    outline: none;
+}
+a{
+	text-decoration:none;
+	color: #000;
+}
+ul,li{
+	list-style:none;
+}
+img{
+	border:none;
+}
+ul{
+   display:block;
+   list-style-type:disc;
+}
+dt{
+	display:block;
+}
+/**头部样式**/
+#header{
+	margin-bottom:8px;
+	min-width: 98%;
+	width:100%;
+    border-bottom: 1px solid #00B2E8;
+    background: #00a2d2 url(../images/header_background.png) repeat-x 0 100%;
+}
+#header .wrap{
+	position: relative;
+    padding:24px 0px 22px 0px;
+    text-align: left;
+    margin:0 auto;
+    height:75px;
+}
+.wrap,#nav{
+	width:98%!important;
+}
+.s_clear{
+	zoom:1;
+} 
+#header .wrap h2{
+	float: left;
+	font-size: 1em;
+}
+#header .wrap h2 a{
+    color: #000;
+}
+#header .wrap h2 a img{
+	width: 189px;
+	height: 75px;
+}
+#header .m_meaun{
+	position: absolute;
+	right:0px;
+	top: 0px;
+	line-height: 20px;
+	word-warp:break-word;
+}
+#header .m_meaun a{
+	margin:0px 6px;
+	color:#97F2FF;
+}
+#header .meau{
+	position: absolute;
+	right:0px;
+	bottom:0px;
+	height: 26px;
+}
+#header .meau ul{
+  width:100%;
+  height:100%;
+} 
+#header .meau ul li{
+	display:inline;
+	float: left;
+	margin-left:5px;
+	background:#EBF4FD;
+}
+#header .meau ul li.current a{
+	height: 26px;
+    border-color: #00B2E8;
+    background-color: #1E4B7E;
+    color: #C3D3E4;
+}
+#header .meau ul li a{
+	float: left;
+	padding:0 14px;
+	border: solid #B0E4EF;
+	border-width: 1px 1px 0;
+	background: transparent none;
+	line-height: 25px;
+	overflow: hidden;    
+}
+/***NAV区域**/
+#nav{
+	margin:-8px auto 0;
+	background-color:#183c68;
+	text-align:left;
+	text-indent:25px;
+	height:36px;
+	line-height:36px;
+	background:url(../images/info.png) no-repeat 0 50%;
+	font-size:12px;
+	color:#C3D3E4;
+}
+#nav a{
+	    color: #C3D3E4;
+	    font-size: 12px;
+}
+/**主要内容区域**/
+#wrap{
+	padding-bottom:10px;
+	min-height:450px;
+	border:0 solid #00B2E8;
+	background-color:#fff;
+	clear:both;
+}
+.threadfix{
+	padding-bottom: 0px!important;
+	min-height: 300px!important;
+}
+.wrap{
+    text-align:left;
+    margin:0 auto;
+}
+#wrap .fornum table,.w_reply table{
+   width:100%;
+   background:#EBF2F8;
+}
+.fornum .modaction,.w_reply .modaction{
+    width: 142px;
+    background: #D3E8F2;
+}
+.fornum td,.w_reply td{
+	padding:15px;
+    color:#444;
+    font: 12px/1.6em Verdana,Helvetica,Arial,sans-serif;
+}
+.pages,.pageback{
+	float: right;
+	padding:2px 0px;
+}
+.pages strong{
+	border-color:#09C!important;
+    background-color:#09C;
+    color: #FFF;
+    font-weight: 700;
+}
+.pages a,.pages strong,.pageback a{
+	float: left;
+    padding: 0 6px;
+    margin-right: 2px;
+    height: 26px;
+    border: 1px solid;
+    line-height: 26px;
+    overflow: hidden;
+}
+em,cite,strong,th{
+	text-align: left;
+	font-weight:normal;
+}
+.pages a,.pageback a{
+	border-color: #E6E7E1;
+    background-color:#fff!important;
+    color: #09C;
+}
+.pages a:hover, .pageback a, .pages a.next {
+    border-color: #09C;
+}
+.pageback a{
+	padding-left: 16px;
+	background:url(../images/back.png) no-repeat 0 50%;
+}
+.postbtn,.replybtn{
+   width: 67px;
+    height: 30px;
+    background: url(../images/opentie.png) no-repeat 0 0;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 28px;
+    text-align: center;
+    overflow: hidden;
+}
+.postbtn, .replybtn, #modopt, #modopttmp {
+    float: left;
+    margin-right: 10px;
+    color: #09C;
+    cursor: pointer;
+}
+.postbtn a,.replybtn a{
+    display: block;
+    padding-left: 5px;
+    color: #FFF;
+    letter-spacing: 5px;
+}
+/**第二部分**/
+.viewthread table{
+	table-layout:fixed;
+}
+.mainbox table{
+	width:100%;
+}
+.mainbox td.postauthor{
+	padding:0;
+    width:170px!important;
+    background: #EBF2F8;
+    overflow: hidden;
+}
+.viewthread td.postcontent,.viewthread td.postauthor{
+	vertical-align:top;
+    padding:0 1px;
+    border:none;
+    overflow:hidden;
+    width:100%;
+}
+.viewthread td.postcontent{
+    padding: 0 15px!important;
+}
+.postinfo {
+    color: #666;
+    margin-bottom: 10px;
+    border-bottom: 1px dashed #E6E7E1;
+    line-height: 36px;
+    height: 36px;
+    overflow: hidden;
+}
+.postauthor .avator{
+ margin:10px 20px;
+}
+.postauthor .avator a img{
+  width:116px;
+  height:116px;
+  border:none;
+}
+.postauthor p, .postauthor dl.profile{
+    margin: 5px 10px 5px 20px;
+}
+.postauthor p em, .postauthor dt em{
+	color: #f60;
+	font-style:normal;
+}
+.postauthor>p{
+   letter-spacing: 0;
+   padding:0px!important;
+   font-size:0px;
+}
+.postauthor>p img{
+	display:inline-block;
+	vertical-align:top;
+}
+.postauthor dt {
+    margin-right: 5px;
+    width: 50px;
+}
+.postauthor dd, .postauthor dt {
+    height: 1.6em;
+    line-height: 1.6em;
+    float: left;
+    overflow: hidden;
+    font-family: Tahoma,sans-serif;
+}
+.postauthor dd {
+    width: 80px;
+}
+.medal{
+	margin-top:8px!important;
+}
+/**右边主要内容**/
+.posterinfo {
+    color: #999;
+    margin-right: auto;
+}
+.posterinfo, .postmessage, .postact {
+    max-width: 85%;
+}
+.posterinfo .pagecontrol{
+	float: right;
+	width: 160px;
+}
+.posterinfo a, .posterinfo em {
+    margin: 0 4px;
+    color: #444;
+}
+.printpage{
+   padding-left: 20px;
+   background: url(../images/print.png) no-repeat 0 10px;
+   float: left;
+}
+.right{
+	float: right;
+}
+.fontsize small{
+    background: url(../images/small_t.png) no-repeat 7px 8px;
+}
+.fontsize small, .fontsize big {
+    width: 20px;
+    text-indent: -9999px;
+    cursor: pointer;
+}
+.fontsize big{
+background: url(../images/small_T.png) no-repeat 7px 8px;
+}
+.authicon {
+    margin-bottom: -4px;
+    cursor: pointer;
+}
+.postinfo strong{
+	float:right;
+	margin-right:0px!important;
+}
+.postinfo strong a {
+    float: right;
+    height: 24px;
+    font-weight: 100;
+    color: #444;
+    line-height: 24px;
+    padding: 0 6px;
+    margin-top: 4px;
+    border: 1px solid #FFF;
+}
+.postinfo em{
+	color: #09C;
+    margin-right: 4px;
+}
+.postinfo strong em.jump{
+    float: right;
+    font-weight: 100;
+    color: #444;
+    margin-left: 20px;
+}
+/*主体部分**/
+.defaultpost{
+	padding-bottom: 1em;
+}
+.postmessage{
+	clear: left;
+}
+.postmessage,.postact{
+    max-width: 85%;
+}
+.postmessage *{
+	line-height:normal;
+}
+.threadtitle{
+	margin-bottom: 8px;
+    border-bottom: 1px dashed #E6E7E1;
+}
+.postmessage h1, .postmessage h2 {
+    margin: 8px 0;
+    font-size: 1.17em;
+}
+.t_msgfontfix{
+min-height: 100px;
+}
+.t_msgfontfix table{
+    margin-left:1px;
+    table-layout:fixed;
+    width:100%;
+}
+.t_msgfont, .t_msgfont td {
+    font-size: 14px;
+    line-height: 1.6em;
+}
+.pstatus, .modact, .modact a {
+    line-height: 32px !important;
+    color: #999;
+}
+.pstatus,.modact{
+    display: block;
+    height: 32px;
+    text-align: center;
+    font-style: normal;
+    color: #999;
+    font-size: 12px;
+}
+.pstatus,.modact,.modact a{
+    line-height: 32px !important;
+    color: #999;
+}
+.modact a:hover{
+	text-decoration:underline;
+}
+.nrate {
+    width: 220px!important;
+}
+.useraction {
+    height: 55px;
+    width: 110px;
+    clear: both;
+    display: block;
+    margin: 20px auto;
+}
+.useraction a{
+    float: left;
+    margin-right: 10px;
+    padding: 30px 0 0;
+    width: 45px;
+    height: 20px;
+    text-align: center;
+    background: url(../images/mark.png) no-repeat 0 0;
+}
+#share{
+	background: url(../images/share.png) no-repeat 0 0;
+}
+.useraction a:hover{
+	text-decoration:underline;
+}
+.ajax_recommendlink{
+    float: left;
+    margin-right: 10px;
+    width: 100px;
+    height: 50px;
+    text-align:center;
+    background:url(../images/up_down.png) no-repeat 0 0;
+}
+#recommendav, #recommendv{
+    cursor: pointer;
+    height: 26px;
+    line-height: 26px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #FFF;
+}
+ul#recommendav {
+    font-size: 11px;
+}
+ul#recommendav li {
+    margin-top: 6px;
+}
+.recommend_act li {
+    float: left;
+    width: 50%;
+}
+ul#recommendav li#recommendv_subtract{
+    color: #EEE;
+}
+#recommend_add, #recommend_subtract{
+    float: none;
+    margin-right: 0;
+    padding: 0 0 0 15px;
+    width: auto;
+    height: 24px;
+    line-height: 24px;
+    background: url(../images/upding.png)no-repeat 2px 50%;
+}
+#recommend_subtract{
+    background-image: url(../images/caidown.png)!important;
+}
+.bottom_decorate{
+    width:100%;
+    height:10px;
+}
+.bottom_decorate .decoration{
+    float: left;
+    width: 547px;
+    height: 100%;
+    background: url(../images/bottom_dec.png);
+}
+.threadad{
+    margin-top:5px!important;
+    z-index: 888;
+    width: 100%;
+}
+.threadad td.postauthor{
+    background: #D3E8F2;
+    padding: 0;
+    height: 6px;
+    overflow:hidden;
+}
+.adcontent{
+    background: #EBF2F8;
+    overflow: hidden;
+}
+#postlist table{
+    padding-bottom:6px; 
+}
+#postlist>div{
+    border-bottom:6px solid #d3e8f2;
+}
+.forumcontrol{
+    width: 100%;
+    height:auto;
+}
+.no_border{
+    border:none!important;
+}
+/**回复栏**/
+.w_reply{
+    height:auto;
+    border-top:6px solid #d3e8f2
+}
+.w_reply img{
+    width: 150px;
+    height: 150px;
+    float: left;
+    border-radius:50%;
+}
+.w_reply .textarea{
+    width: 580px;
+    height: 226px;
+    float: left;
+    margin-left:20px;
+}
+.w_reply button{
+    float: left;
+    width: 200px;
+    height: 50px;
+    margin-top:250px;
+    margin-left: -200px;
+}
+.w_reply .textarea textarea{
+    width: 100%;
+    height: 100%;
+}
+/**尾部样式**/
+.footer{
+    width: 100%;
+    text-align:center;
+    float:left;
+    position:relative;
+    background-color:#163965;
+    padding:40px 0px;
+}
+.footer ul{
+    width:620px;
+    text-align:center;
+    display: block;
+    margin:0px auto;
+}
+.footer ul li{
+    padding:10px 15px;
+    float:left;
+}
+.footer ul li a{
+    font-size:15px;
+    color:#000;
+}
+.footer p{
+    color:#999;
+    margin-top:48px;
+    width: 100%;
+}
+/****/

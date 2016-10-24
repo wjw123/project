@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<meta name="" key="">
+<head>
+	<title>发帖</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/post.css">
+    <script type="text/javascript" src="../JS/jquery-1.7.2.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../CSS/button.css">
+     <script type="text/javascript" src="ckeditor/ckeditor.js"></script>
+</head>
+<body>
+     <div id="header">
+     	<div class="wrap s_clear">
+     		<h2>
+     			<a href="./index.html">
+     				<img src="../images/logo.png">
+     			</a>
+     		</h2>
+     		<div class="m_meaun">
+     			<a href="#">注册</a>
+     			<a href="#">登录</a>
+     		</div>
+     		<div class="meau">
+     			<ul>
+     				<li class="current">
+     					<a href="#" hidefoucs="true">论坛</a>
+     				</li>
+     				<li class="menu_1">
+     					<a href="#" hidefoucs="true">搜索</a>
+     				</li>
+     				<li class="menu_2">
+     					<a href="#" hidefoucs="true">帮助</a>
+     				</li>
+     				<li class="menu_3">
+     					<a href="#" hidefoucs="true">导航</a>
+     				</li>
+     				<li class="menu_4">
+     					<a href="#" hidefoucs="true">儿童摄影</a>
+     				</li>
+     			</ul>
+     		</div>
+     	</div>
+     </div>
+     <div id="nav">
+     	<a href="#" class="fojump" href="#">校园之家下载论坛</a>&nbsp;>>
+          <a href="#" class="fojump">迅雷转帖区</a>&nbsp;>><span>[机械师2：复活-韩版][HD-1080P.MP4][中文字幕/1.99GB][2016动作犯罪惊悚]</span>
+     </div>
+     <div class="ad_text"></div>
+     <div id="wrap" class="wrap s_clear threadfix">
+     <div class="content">
+     	<form method="post" id="postform">
+     		<input type="hidden">
+     		<input type="hidden">
+     		<input type="hidden">
+     		<input type="hidden">
+     	<div class="s_clear" id="editor_box">
+     		<h3 class="float_ctrl">
+     		<em id="return_message">发新话题</em>
+     		<em class="needverify">需审核</em>
+     		<span><a href="#" target="_blank" title="积分说明">发帖后您的&nbsp;威望 +2  &nbsp;</a></span>
+     		</h3>
+     		<div class="postbox" id="postbox">
+     		<div class="float_postinfo s_clear">
+     		    <div>
+     			<em id="icon" class="dropmenu">
+     			<img src="../images/down1.png" alt="" id="icon_img">
+     			</em>
+     			<ul id="icon_menu" class="popupmenu_popup" style="position: absolute; z-index: 301; opacity: 1; left: 38.4844px; top: 234px; display:none;">
+     			<li>
+     			<a href="javascript:;">
+     				<img src="../images/hot2.png" onclick="" src="">
+     			</a>
+     			</li>
+     			<li>
+     			<a href="javascript:;">
+     				<img src="../images/hot2.png" onclick="" src="">
+     			</a>
+     			</li>
+     			<li>
+     			<a href="javascript:;">
+     				<img src="../images/hot2.png" onclick="" src="">
+     			</a>
+     			</li>
+     			<li>
+     			<a href="javascript:;">
+     				<img src="../images/hot2.png" onclick="" src="">
+     			</a>
+     			</li>
+     			<li>
+     			<a href="javascript:;">
+     				<img src="../images/down1.png" onclick="" src="">
+     			</a>
+     			</li>
+     			</ul>
+     		    </div>
+     			<span>
+                <input name="subject" id="subject" prompt="post_subject" class="txt" value="" tabindex="1">
+     			</span>
+     		<div class="left">
+     			<div class="float_typeid">
+     			<a href="javascript:;" hidefoucs="true" id="typeid_ctrl" tabindex="1">分类</a>
+     			</div>     		
+     		</div>
+     		<ul class="kind" id="icon_menu_2" style="position: absolute; z-index: 301; opacity: 1; left:447.484px; top:234px; display:none;">
+     		<li class="current">分类</li>
+     		<li>讨论</li>
+     		<li>原创</li>
+     		<li>转帖</li>
+     		<li>分享</li>
+     		<li>其他</li>
+     		</ul>
+     		</div>
+<!--主要发布区域-->
+            <div id="editor">
+            <textarea class="editor" name="ta_ckeditor"></textarea>
+            </div>
+<!---->
+     		</div>
+     	    <div class="btnbar">
+            	<button type="submit" id="postsubmit" prompt="post_submit" value="true" name="topicsubmit" tabindex="1" class="button button-action">发新话题</button>
+     		</div>
+     	</div>
+     	</form>
+     </div>
+     </div>
+ </body>
+<script type="text/javascript">
+    var editor=CKEDITOR.replace('ta_ckeditor', { height:'250px',width:'100%' });
+     function upload(){
+        editor.updateElement(); //非常重要的一句代码
+      if($.trim(editor.document.getBody().getText())==""){
+            alert("内容不能为空！");
+            return false;
+       }else{
+              alert(editor.getData());
+              return true;
+       }
+     }
+</script>
+<script type="text/javascript">
+   $('#icon').click(function(){
+   	$('#icon_menu').css("display","block");
+   })
+   $('#typeid_ctrl').click(function(){
+   	$('.kind').css("display","block");
+   })
+   document.getElementById('icon_menu').onmouseout=closeMenu;
+   document.getElementById('icon_menu_2').onmouseout=closeMenu;
+	 function closeMenu(event){ 
+	var current, related; 
+	if (window.event) { 
+	current = this; 
+	related = window.event.toElement; 
+	} 
+	else { 
+	current = event.currentTarget; 
+	related = event.relatedTarget; 
+	} 
+	if (current != related && !contains(current, related)) 
+	current.style.display="none"; 
+	} 
+	function contains(a, b) { 
+	// Return true if node a contains node b. 
+	while (b.parentNode) 
+	if ((b = b.parentNode) == a) 
+	return true; 
+	return false; 
+	} 
+</script>
+<script type="text/javascript">
+    var a=document.getElementById('typeid_ctrl');
+	var ul2=document.getElementById('icon_menu_2');
+	var li2=ul2.getElementsByTagName('li');
+	for(var i=0;i<li2.length;i++){
+		(function(i){
+			li2[i].onclick=function(){
+              a.innerHTML=li2[i].innerHTML;
+              ul2.style.display="none";
+			}
+		})(i)
+	}
+</script>
+<script type="text/javascript">
+	var Target_img=document.getElementById('icon_img');
+	var ul=document.getElementById('icon_menu');
+	var li=ul.getElementsByTagName('li');
+	for(var i=0;i<li.length;i++){
+		(function(i){
+		   li[i].onclick=function(){
+		   	Target_img.src=$(this).find('img').attr('src');
+		   	ul.style.display="none";
+		   }
+		})(i)
+	}
+</script>
+</html>
